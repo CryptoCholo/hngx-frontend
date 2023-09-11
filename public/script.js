@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const currentDayOfTheWeek = document.querySelector('[data-testid="currentDayOfTheWeek"]');
     
     setInterval(function () {
-        const currentTime = new Date().toUTCString().replace(/\.\d{5}Z$/, 'Z');
-        currentUTCTimeElement.textContent = currentTime;
+        const currentTime = new Date().toUTCString();
+        currentUTCTimeElement.textContent = Date.parse(currentTime);
     }, 1000); // Update every second
 
     setInterval(function () {
